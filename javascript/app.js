@@ -88,8 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
    })
       .then(respons => respons.json())
       .then(phon => {
-         let user = JSON.parse(localStorage.getItem("User"))
-         adminName.textContent = "ADMIN" + " " +`${user.email}`
+
          phon.forEach(element => {
             table.innerHTML += `
          <tbody>
