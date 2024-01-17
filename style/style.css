@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+#btn{
+    padding: 5px 40px;
+    border: none;
+    border-radius: 10px;
+    background: #54BAB9;
+    color: #fff;
+    transition: all 0.5s;
+    
+}
+#btn:hover{
+    background: #3f8584;
+    transform: scale(1.1);
+}
+.container{
+    max-width: 1500px;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+}
+.admin{
+    border: 3px solid #54BAB9;
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: fixed;
+    height: 100vh;
+    left: 0px;
+    width: 150px;
+}
+#admin img{
+width: 80px;
+height: 80px;
+object-fit: contain;
+}
+#admin{
+    border: 3px solid #54BAB9;
+    padding: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom:20px;
+
+}
+#admin p{
+    text-align: center;
+}
+.delet h5{
+text-align: center;
+margin-bottom: 10px;
+background-color:#54BAB9;
+color: #fff;
+padding: 0px 10px;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.5s;
+}
+.add{
+    width: 1350px;
+    margin-left: 180px;
+}
+.add h1{
+    color: #fff;
+    background-color:#54BAB9;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.add thead{
+    width: 100%;
+    
+}
+.delet h5:hover{
+    transform: scale(1.1);
+    background: #419392;
+}
