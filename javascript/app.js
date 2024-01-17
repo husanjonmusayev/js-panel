@@ -98,11 +98,27 @@ document.addEventListener("DOMContentLoaded", function () {
                       <td>${element.price}</td>
                       <td>${element.description}</td>
                       <td>${element.status}</td>
-                      <td>${element.createdAt}</td>
+                      <td>${element.category_id}</td>
+                      <td class="isDel"  id="${element.id}"><img src="./img/delete.png" alt="deletIcon" width="20" height="20"></td>
                     </th>                   
          </tbody
          `
          });
+
+         const isDel = document.querySelectorAll(".isDel")
+         isDel && isDel.forEach( del => {
+            del.addEventListener("click", function(){
+              let postDel = del.id
+              if(postDel){
+               fetch(`https://auth-rg69.onrender.com/api/products/${postDel}`,{
+                  method:"DELETE"
+               })
+               .then(respons => respons.json())
+               .then(data => console.log(data))
+              }
+            })
+         })
+         
       })
 
 })
