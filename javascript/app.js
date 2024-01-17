@@ -82,14 +82,14 @@ btn && btn.addEventListener('click', function () {
    clear()
 })
 
-document.addEventListener("DOMContentLoaded", function () {
-   let user = JSON.parse(localStorage.getItem("User"))
-   adminName.textContent = "ADMIN" + " " +`${user.email}`
+document.addEventListener("DOMContentLoaded", function () {  
    fetch("https://auth-rg69.onrender.com/api/products/all", {
       method: "GET"
    })
       .then(respons => respons.json())
       .then(phon => {
+         let user = JSON.parse(localStorage.getItem("User"))
+         adminName.textContent = "ADMIN" + " " +`${user.email}`
          phon.forEach(element => {
             table.innerHTML += `
          <tbody>
