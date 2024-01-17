@@ -62,7 +62,16 @@ transition: all 0.5s;
     width: 1350px;
     margin-left: 180px;
 }
+#adminName{
+    text-align: center;
+    background-color: #54BAB9;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
 .add h1{
+    font-size: 30px;
     color: #fff;
     background-color:#54BAB9;
     padding: 20px;

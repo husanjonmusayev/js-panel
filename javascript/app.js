@@ -1,6 +1,7 @@
 let table = document.getElementById('table')
 let phonName = document.getElementById('name')
 let prace = document.getElementById('prace')
+let admin = document.getElementById('adminName')
 let stet = document.getElementById('status')
 let formControl = document.querySelector('#exampleFormControlTextarea1')
 let category = document.getElementById('category')
@@ -82,6 +83,8 @@ btn && btn.addEventListener('click', function () {
 })
 
 document.addEventListener("DOMContentLoaded", function () {
+   let user = JSON.parse(localStorage.getItem("User"))
+   adminName.textContent = "ADMIN" + " " +`${user.email}`
    fetch("https://auth-rg69.onrender.com/api/products/all", {
       method: "GET"
    })
