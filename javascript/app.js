@@ -114,7 +114,12 @@ document.addEventListener("DOMContentLoaded", function () {
                   method:"DELETE"
                })
                .then(respons => respons.json())
-               .then(data => console.log(data))
+               .then(data => {
+                  if(data){
+                     window.location.reload()
+                  }
+                 
+               })
               }
             })
          })
