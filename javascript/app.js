@@ -3,7 +3,7 @@ let phonName = document.getElementById('name')
 let prace = document.getElementById('prace')
 let admin = document.getElementById('adminName')
 let stet = document.getElementById('status')
-let formControl = document.querySelector('#exampleFormControlTextarea1')
+let formControl = document.querySelector('#textarea')
 let category = document.getElementById('category')
 let btn = document.getElementById('btn')
 let caunt = 1;
@@ -52,7 +52,7 @@ function validate() {
    return true
 }
 function clear(){
-   formControl.valeu = ""
+   formControl.value = ''
    phonName.value = ""
    prace.value = ""
    category.value = ""
@@ -76,9 +76,14 @@ btn && btn.addEventListener('click', function () {
             body: JSON.stringify(phon)
         })
       .then(respons => respons.json())
-      .then(phon => phon)
+      .then(phon => {
+         if(phon){
+            window.location.reload() 
+         }
+      })
 
    }
+   
    clear()
 })
 
